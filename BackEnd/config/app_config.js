@@ -1,0 +1,18 @@
+var express = require('express');
+var bodyParser = require('body-parser');
+var port = '3000';
+
+var app = module.exports = express();
+
+  
+app.listen(port);
+
+app.use(bodyParser.urlencoded({encoded:true}));
+app.use(bodyParser.json());
+
+app.use(function(req, res, next){
+    res.setHeader('Access-Control-Allow-Origin','*');
+    res.setHeader('Access-Control-Allow-Origin', 'GET,POST,PUT,DELETE');
+    res.setHeader('Access-Control-Allow-Origin','X-Requested-With,content-type, Authorization');
+    next();
+})
