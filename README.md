@@ -1,4 +1,4 @@
-﻿<p align="center">
+﻿﻿<p align="center">
   <h3 align="center">Desafio IBM</h3>
 </p>
 
@@ -28,8 +28,10 @@ As tecnologias utilizadas neste projeto foram.
 <!-- GETTING STARTED -->
 ## Executando o projeto
 
-* Execute a API em node no pasta BackEnd.
-* Abra o arquivo Index.html na pasta FrontEndBuild.
+* Execute a API em node no pasta BackEnd (porta 3000).
+* Execute o comando npm install na pasta FrontEnd para baixar as dependências do projeto (necessário npm instalado na máquina).
+* Execute o comando ng serve nas pasta FrontEnd.
+* Acesse no navegador http://localhost:4200.
 * Insira os valores solicitados na tela.
 * Clique em "Calcular".
 
