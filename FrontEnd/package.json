@@ -21,6 +21,7 @@
     "@angular/router": "~8.1.2",
     "@ngx-plus/ngx-alerts": "^0.6.0",
     "bootstrap": "^4.3.1",
+    "ngx-loading": "^3.0.1",
     "rxjs": "~6.4.0",
     "rxjs-compat": "^6.5.2",
     "tslib": "^1.9.0",

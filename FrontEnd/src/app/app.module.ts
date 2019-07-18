@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxAlertsModule } from '@ngx-plus/ngx-alerts'
+import { NgxLoadingModule } from 'ngx-loading';
 
 import { AppComponent } from './app.component';
 import { MiojoComponent } from './miojo/miojo.component';
@@ -19,7 +20,8 @@ import { MiojoComponent } from './miojo/miojo.component';
     FormsModule,
     HttpClientModule,
     AppRoutingModule,
-    NgxAlertsModule.forRoot()
+    NgxAlertsModule.forRoot(),
+    NgxLoadingModule.forRoot({})
   ],
   providers: [],
   bootstrap: [AppComponent]

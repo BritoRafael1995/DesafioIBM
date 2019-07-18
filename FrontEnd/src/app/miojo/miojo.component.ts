@@ -11,6 +11,7 @@ import { take } from 'node_modules/rxjs/operators';
 })
 export class MiojoComponent implements OnInit {
 
+  loading = false;
   calcMiojo = new CalculoMiojo();
 
   constructor(
@@ -22,11 +23,15 @@ export class MiojoComponent implements OnInit {
   }
 
   calcular(){
+    this.loading = true;
+
     this.servico.calcularTempoMiojo(this.calcMiojo).pipe(take(1))
     .subscribe((result) => {
       this.util.alerta('success', 'Sucesso', result);
+      this.loading = false;
     }, err => {
       this.util.alerta('error', 'Falha', err.error);
+      this.loading = false;
     });
   }
 
