@@ -37,7 +37,7 @@ As tecnologias utilizadas neste projeto foram.
 <!-- CONTACT -->
 ## Contato
 
-Rafael Brito - (https://www.linkedin.com/in/rafael-brito-11913086/) - britorafael1995@gmail.com
+Rafael Brito - [LinkedIn](https://www.linkedin.com/in/rafael-brito-11913086/) - britorafael1995@gmail.com
 
 Link do Projeto: [https://github.com/BritoRafael1995/DesafioIBM](https://github.com/BritoRafael1995/DesafioIBM)
 
