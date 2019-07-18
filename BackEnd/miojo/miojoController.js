@@ -1,24 +1,62 @@
 
-exports.tempoPreparo = function(amp1, amp2, callback){
-    var retorno = `Ampulheta 1 - ${amp1} e Ampulheta 2 - ${amp2}`
-  callback(retorno);
+exports.tempoPreparo = function(tempo, a0, b0, callback){
+
+  if(tempo % 2 != 0 && (a0 % 2 == 0 && b0 % 2 == 0)){
+    callback("Não é possivel preparar o miojo no tempo correto com estas ampulhetas");
+    return;
+  }
+
+  if(a0 <= tempo || b0 <= tempo){
+    callback(`O tempo das ampulhetas precisam ser maiores que o tempo de cozimento do miojo`);
+    return
+  }
+
+
+
+    
+
+  
+
+  var a = a0;
+  var b = b0;
+
+  var x = 0;
+  var i = 1;
+
+  while(x != tempo){
+
+    console.log(`tentativa ${i}`);
+
+    if(a < b )
+      x = b - a;
+
+    else
+      x = a - b;
+
+    console.log(`a ${a}`);
+
+    console.log(`b ${b}`)
+
+    console.log(`x ${x}`)
+
+    if(a < b && x != tempo)
+      a += a0;
+
+    else if(x != tempo)
+      b += b0;
+
+    ++i;
+  }
+
+  if(a > b)
+    callback(`O tempo mínimo para preparar o miojo é: ${a}`);
+
+  else
+    callback(`O tempo mínimo para preparar o miojo é: ${b}`);
+
+  
 }
 
-// app.get('/maps', function(req, res) {
-//     var dados = [
-//       {
-//         lat: -25.470991, 
-//         lon: -49.271036
-//       },
-//       {
-//         lat: -0.935586,
-//         lon: -49.635540
-//       },
-//       {
-//         lat: -2.485874, 
-//         lon: -43.128493
-//       }
-//     ];
   
 //     res.send(JSON.stringify(dados));
 //   });
